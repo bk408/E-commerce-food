@@ -239,3 +239,38 @@ app.get("/thank_you",function(req,res){
 })
 
 
+app.get("/single_product", function(req,res){
+   var id = req.query.id;
+
+   var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "node_project",
+  });
+
+  con.query("SELECT * FROM products WHERE ID='"+id+"'", (err, result) => {
+    res.render("pages/single_product", { result: result });
+  });
+})
+
+
+app.get("/products", function(req,res){
+  var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "node_project",
+  });
+
+  con.query("SELECT * FROM products", (err, result) => {
+    res.render("pages/products", { result: result });
+  });
+})
+
+
+app.get("/about", function(req,res){
+   res.render('pages/about')
+})
+
+

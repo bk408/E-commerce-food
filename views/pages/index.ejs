@@ -55,13 +55,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Menu</a>
+                <a class="nav-link" href="products">Menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="about">About</a>
               </li>
             </ul>
             <div class="user_option">
@@ -399,8 +399,8 @@
                 </div>
                 <div class="detail-box">
                   <h5>
-                    <%= item.name %>
-                  </h5>
+                  <a href="single_product?id=<%= item.id %>" style="color: #fff"> <%= item.name %></a>
+                </h5>
                   <p>
                     <%= item.description %>
                   </p>
@@ -731,6 +731,7 @@
   <!-- footer section -->
 
   <!-- jQery -->
+  <script src="https://kit.fontawesome.com/0c07870b0c.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
